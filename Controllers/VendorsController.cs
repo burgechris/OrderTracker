@@ -26,11 +26,15 @@ namespace OrderTracker.Controllers
       return RedirectToAction("Index");
     }
 
-    // [HttpGet("/orders/{id}")]
-    // public ActionResult Show(int id)
-    // {
-    //   Order foundOrder = Order.Find(id);
-    //   return View(foundOrder);
-    // }  
+    [HttpGet("/vendors/{id}")]
+    public ActionResult Show(int id)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor selectedVendor = Vendor.Find(id);
+      List<Order> vendorOrders = selectedVendor.Orders;
+      model.Add("vendors", selectedVendor);
+      model.Add("orders", vendorOrders);
+      return View(model);
+    }
   }
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>New Vendor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <link rel="stylesheet" type="text/css" media="screen" href="~/css/site.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Add a New Vendor</h1>
+        <form action="/orders" method="post">
+          <div class="form-group">
+          <label for="name">Name of the Vendor</label>
+          <input id="name" name="name" type="text">
+          </div>
+
+          <div class="form-group">
+          <label for="description">Vendor Description</label>
+          <input id="description" name="description" type="text">
+          </div>
+
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+        <a href="/vendors"><button class="btn btn-primary" type="click" name="button">Back To Vendor List</button></a>
+        <a href='/'><button class="btn btn-primary" type="click" name="button">Back Home</button></a>
+
+      </div>
+    </body>
+</html>

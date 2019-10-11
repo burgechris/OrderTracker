@@ -1,0 +1,32 @@
+@using OrderTracker.Models;
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vendor List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <link rel="stylesheet" type="text/css" media="screen" href="~/css/site.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Vendor Order History</h3>
+            <!-- <h3>Total Vendors: @Vendor._idCounter</h3>
+            @if (Model.Count == 0)
+            {
+                <p>No vendors have been added!</p>
+            }
+
+            @foreach (Vendor vendor in Model)
+            {
+              <h3><a href='/vendors/@vendor.Id'>@Vendor.Name</a></h3>
+            }
+          -->
+            <a href="/vendors"><button class="btn btn-primary" type="click" name="button">Back to Vendor List</button></a>
+            <a href='/'><button class="btn btn-primary" type="click" name="button">Back Home</button></a>
+        </div> 
+    </body>
+</html>
