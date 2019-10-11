@@ -6,30 +6,25 @@ namespace OrderTracker.Controllers
 {
   public class VendorsController : Controller
   {
-    [HttpGet("/orders")]
+    [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      List<Order> allOrders = Order.GetAll();
-      return View(allOrders);
+      List<Vendor> allVendors = Vendor.GetAll();
+      return View(allVendors);
     }
 
-    [HttpGet("/orders/new")]
+    [HttpGet("/vendors/new")]
     public ActionResult New()
     {
       return View();
     }
 
-    // [HttpPost("/items/remove")]
-    // public ActionResult Remove(List<int> ids)
-    // {
-    //   foreach (int id in ids)
-    //   {
-    //     Item deleteItem = Item.Find(id);
-    //     Item._instances.Remove(deleteItem);
-    //   }
-    //   Item.BackpackWeight();
-    //   return View();
-    // }
+    [HttpPost("/vendors")]
+    public ActionResult Create(string vendorName, string vendorDescription)
+    {
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      return RedirectToAction("Index");
+    }
 
     // [HttpGet("/orders/{id}")]
     // public ActionResult Show(int id)
