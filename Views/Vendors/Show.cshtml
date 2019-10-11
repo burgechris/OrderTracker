@@ -14,7 +14,15 @@
     <body>
         <div class="container">
             <h3>Vendor Order History</h3>
+
+            <ol>
+              @foreach (Order order in @Model["orders"])
+              {
+                <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
+              }
+            </ol>
             
+            <a href="/vendors/@Model["vendor"].Id/orders/new"><button class="btn btn-primary" type="click" name="button">Add New Order</button></a>
             <a href="/vendors"><button class="btn btn-primary" type="click" name="button">Back to Vendor List</button></a>
             <a href='/'><button class="btn btn-primary" type="click" name="button">Back Home</button></a>
         </div> 
