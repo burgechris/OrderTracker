@@ -9,8 +9,8 @@ namespace OrderTracker.Controllers
     [HttpGet("/items")]
     public ActionResult Index()
     {
-      List<Item> allItems = Item.GetAll();
-      return View(allItems);
+      List<Order> allOrders = Order.GetAll();
+      return View(allOrders);
     }
 
     [HttpGet("/items/new")]
@@ -19,23 +19,23 @@ namespace OrderTracker.Controllers
       return View();
     }
 
-    [HttpPost("/items/remove")]
-    public ActionResult Remove(List<int> ids)
-    {
-      foreach (int id in ids)
-      {
-        Item deleteItem = Item.Find(id);
-        Item._instances.Remove(deleteItem);
-      }
-      Item.BackpackWeight();
-      return View();
-    }
+    // [HttpPost("/items/remove")]
+    // public ActionResult Remove(List<int> ids)
+    // {
+    //   foreach (int id in ids)
+    //   {
+    //     Item deleteItem = Item.Find(id);
+    //     Item._instances.Remove(deleteItem);
+    //   }
+    //   Item.BackpackWeight();
+    //   return View();
+    // }
 
-    [HttpGet("/items/{id}")]
+    [HttpGet("/orders/{id}")]
     public ActionResult Show(int id)
     {
-      Item foundItem = Item.Find(id);
-      return View(foundItem);
+      Order foundOrder = Order.Find(id);
+      return View(foundOrder);
     }
   }
 }

@@ -19,5 +19,15 @@ namespace OrderTracker
       Id = _instances.Count;
       Orders = new List<Order>{};
     }
+
+    public static List<Order> GetAll()
+    {
+      return _instances;
+    }
+
+    public void AddOrder(Order order)
+    {
+      Order.Add(order);
+    }
   }
 }
