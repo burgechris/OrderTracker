@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Welcome</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <link rel="stylesheet" type="text/css" media="screen" href="~/css/site.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Add a New Order</h1>
+        <form action="/items" method="post">
+          <div class="form-group">
+          <label for="name">Enter the Name on the Order</label>
+          <input id="name" name="name" type="text">
+          </div>
+
+          <div class="form-group">
+          <label for="order">Enter the Order Item</label>
+          <input id="order" name="order" type="text">
+          </div>
+
+          <div class="form-group">
+          <label for="cost">Enter the Order Total</label>
+          <input id="cost" name="cost" type="text">
+          </div>
+
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+      </div>
+    </body>
+</html>

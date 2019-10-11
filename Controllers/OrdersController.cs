@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using BigfootTracker.Models;
+using OrderTracker.Models;
 using System.Collections.Generic;
 
 namespace OrderTracker.Controllers
@@ -19,6 +19,11 @@ namespace OrderTracker.Controllers
       return View();
     }
 
-    
+    [HttpPost("/orders")]
+    public ActionResult Create(string name, string item, double cost)
+    {
+      Order newOrder = new Order(name, item, cost);
+      return RedirectToAction("Index");
+    }
   }
 }
