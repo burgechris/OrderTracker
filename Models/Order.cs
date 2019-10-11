@@ -28,9 +28,9 @@ namespace OrderTracker.Models
       return _instances;
     }
 
-    public static Order Find(int searchId)
-    {
-      return _instances.Where(order => order.Id == searchId).FirstOrDefault();
-    }
+    // public static Order Find(int searchId)
+    // {
+    //   return _instances.Where(order => order.Id == searchId).FirstOrDefault();
+    // }
   }
 }

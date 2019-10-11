@@ -38,7 +38,7 @@ namespace OrderTracker
 
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Bigfoot isn't real. Do something better with your time!");
+        await context.Response.WriteAsync("Ruh Roh. Something went wrong");
       });
 
     }

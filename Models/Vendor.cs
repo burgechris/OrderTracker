@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OrderTracker
+namespace OrderTracker.Models
 {
   public class Vendor
   {
@@ -17,17 +17,17 @@ namespace OrderTracker
       Description = vendorDescription;
       _instances.Add(this);
       Id = _instances.Count;
-      Orders = new List<Order>{};
+      Orders = new List<Order> {};
     }
 
-    public static List<Order> GetAll()
+    public static List<Vendor> GetAll()
     {
       return _instances;
     }
 
-    public void AddOrder(Order order)
-    {
-      Order.Add(order);
-    }
+    // public void AddOrder(Order order)
+    // {
+    //   Order.Add(order);
+    // }
   }
 }
