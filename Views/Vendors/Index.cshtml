@@ -21,7 +21,7 @@
 
             @foreach (Vendor vendor in Model)
             {
-              <h3><input class="form-check-input" type="checkbox" name ="ids" value="@vendor.Id"><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
+              <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
             }
          
             <a href="/vendors/new"><button class="btn btn-primary" type="click" name="button">Add a New Vendor</button></a>
