@@ -12,18 +12,18 @@
     <body>
       <div class="container">
         <h1>Add a New Vendor</h1>
-        <form action="/orders" method="post">
+        <form action="/vendors" method="post">
           <div class="form-group">
-          <label for="name">Name of the Vendor</label>
-          <input id="name" name="name" type="text">
+          <label for="vendorName">Name of the Vendor</label>
+          <input id="vendorName" name="vendorName" type="text">
           </div>
 
           <div class="form-group">
-          <label for="description">Vendor Description</label>
-          <input id="description" name="description" type="text">
+          <label for="vendorDescription">Vendor Description</label>
+          <input id="vendorDescription" name="vendorDescription" type="text">
           </div>
 
-          <button class="btn btn-primary" type="submit">Submit</button>
+          <button class="btn btn-primary" type="submit">Add Vendor</button>
         </form>
 
         <a href="/vendors"><button class="btn btn-primary" type="click" name="button">Back To Vendor List</button></a>
