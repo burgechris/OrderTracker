@@ -1,0 +1,12 @@
+﻿h1 {
+  color: blueviolet;
+  font-style: italic;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#btn-delete {
+  margin-bottom: 10px;
+}

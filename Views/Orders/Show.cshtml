@@ -12,15 +12,15 @@
     <body>
       <div class="container">
         <h1>Order Details: </h1>
-          <h2>@Model.Title</h2>
+          <h2>@Model["order"].Title</h2>
             <ul>
-            <li>Description: @Model.Description</li>
-            <li>Total: @Model.Cost</li>
-            <li>Date: @Model.Date lbs</li>
+            <li>Description: @Model["order"].Description</li>
+            <li>Total: @Model["order"].Cost</li>
+            <li>Date: @Model["order"].Date lbs</li>
             </ul>
 
-            <a href='/orders/new'><button class="btn btn-primary" type="click" name="button">Add Orders</button></a>
-            <a href='/orders'><button class="btn btn-primary" type="click" name="button">View or Edit Orders</button></a>
+            <a href='/vendors/@Model["vendor"].Id/orders/new'><button class="btn btn-primary" type="click" name="button">Add An Orders</button></a>
+            <a href='/vendors/@Model["vendor"].Id/orders'><button class="btn btn-primary" type="click" name="button">View or Edit Orders</button></a>
       </div>
     </body>
 </html>

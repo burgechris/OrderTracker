@@ -6,17 +6,11 @@ namespace OrderTracker.Controllers
 {
   public class OrdersController : Controller
   {
-    [HttpGet("/orders")]
-    public ActionResult Index()
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
     {
-      List<Order> allOrders = Order.GetAll();
-      return View(allOrders);
-    }
-
-    [HttpGet("/orders/new")]
-    public ActionResult New()
-    {
-      return View();
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
     }
 
     [HttpPost("/orders")]
