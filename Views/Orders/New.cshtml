@@ -12,8 +12,9 @@
     <body>
       <div class="container">
         <h1>Add a New Order</h1>
-        <form action="/orders" method="post">
+        <form action="/vendors/@Model.Id/orders" method="post">
           <div class="form-group">
+          <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
           <label for="title">Title of the Order</label>
           <input id="title" name="title" type="text">
           </div>
