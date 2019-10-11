@@ -14,18 +14,23 @@
         <h1>Add a New Order</h1>
         <form action="/items" method="post">
           <div class="form-group">
-          <label for="name">Enter the Name on the Order</label>
-          <input id="name" name="name" type="text">
+          <label for="title">Title of the Order</label>
+          <input id="title" name="title" type="text">
           </div>
 
           <div class="form-group">
-          <label for="order">Enter the Order Item</label>
-          <input id="order" name="order" type="text">
+          <label for="description">Description of the Order</label>
+          <input id="description" name="description" type="text">
           </div>
 
           <div class="form-group">
           <label for="cost">Enter the Order Total</label>
           <input id="cost" name="cost" type="text">
+          </div>
+
+          <div class="form-group">
+          <label for="date">Enter the Date of the Order</label>
+          <input id="date" name="date" type="text">
           </div>
 
           <button class="btn btn-primary" type="submit">Submit</button>

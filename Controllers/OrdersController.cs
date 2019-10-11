@@ -20,9 +20,9 @@ namespace OrderTracker.Controllers
     }
 
     [HttpPost("/orders")]
-    public ActionResult Create(string name, string item, double cost)
+    public ActionResult Create(string title, string description, double cost, string date)
     {
-      Order newOrder = new Order(name, item, cost);
+      Order newOrder = new Order(title, description, cost, date);
       return RedirectToAction("Index");
     }
   }
