@@ -1,7 +1,11 @@
 ﻿ul {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 #btn-delete {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+#orderList {
+	font-size: 20px;
 }

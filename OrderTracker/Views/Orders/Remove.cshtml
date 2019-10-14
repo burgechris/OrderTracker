@@ -14,8 +14,8 @@
     <body>
         <div class="container">
             <h3>The orders have been removed from your order history.</h3>
-            <a href="/orders/new"><button class="btn btn-primary" type="click" name="button">Add Another Order</button></a>
-            <a href="/orders"><button class="btn btn-primary" type="click" name="button">View or Edit Order History</button></a>
+            <a href="/vendors/@Model.Id/orders"><button class="btn btn-primary" type="click" name="button">View or Edit Order History</button></a> 
+            //This above line keeps throwing an error that I can't figure out. "RuntimeBinderException: Cannot perform runtime binding on a null reference"
         </div> 
     </body>
 </html>
